@@ -1,0 +1,169 @@
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(200, 71%, 15%);
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+
+    --face-size:300px;
+}
+.full-head{
+    background-color: rgb(255, 217, 217);
+    width:var(--face-size);
+    height: calc(var(--face-size) * 1.1);
+    border-radius: 70% 70% 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+
+}
+.eye-brow-group{
+    position:absolute;
+    top:calc(var(--face-size) * .33);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:75%;
+}
+.brow{
+ height: calc(var(--face-size) * .1);
+ width: calc(var(--face-size) * .28 );
+ border-radius: 100%;
+ border-top: calc(var(--face-size) * .02) solid hsl(19, 46%, 58%);
+}
+.eye-group{
+    position:absolute;
+    width:75%;
+    display:flex;
+    justify-content: space-between;
+    top:calc(var(--face-size) * .37);
+}
+
+.eye{
+    background-color:white;
+    height: calc(var(--face-size) * .13);
+    width: calc(var(--face-size) * .26);
+    border-radius: 100%;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid hsl(19, 46%, 58%);
+    border-bottom: 2px solid hsl(19, 46%, 58%);
+    overflow: hidden;
+
+}
+.eye::before{
+    content: "";
+    background-color: hsl(78, 10%, 42%);
+    height:calc(var(--face-size) * .14);
+    width: calc(var(--face-size) * .14);
+    position: absolute;
+    border-radius:100%;
+    margin-left:calc(var(--face-size) * .039);
+    margin-bottom:6px;
+}
+.eye::after{
+    content: "";
+    background-color: #333;
+    height: calc(var(--face-size) * .035);
+    width: calc(var(--face-size) * .035);
+    position:absolute;
+    border-radius: 100%;
+    position:absolute;
+    margin-left:calc(var(--face-size) * .035);
+    margin-bottom:10px;
+    margin-left:15px;
+}
+.left-eye{
+    margin-left: 5px;
+}
+.right-eye{
+    margin-right: 5px;
+}
+.nose{
+    position:absolute;
+    height: calc(var(--face-size) * .15);
+    width: calc(var(--face-size) * .1);
+    border: calc(var(--face-size) * .01) solid hsl(19, 23%, 48%);
+    border-top: none;
+    border-radius: 0 0 30% 30%;
+    margin-top: 5%;
+}
+.mouth{
+    background-color: white;
+    height: calc(var(--face-size) * .15);
+    width:  calc(var(--face-size) * .4);
+    position:absolute;
+    bottom: calc(var(--face-size) * .2);
+    border-top: calc(var(--face-size) * .01) solid hsl(19, 46%, 58%);
+    border-bottom: calc(var(--face-size) * .01) solid hsl(19, 46%, 40%);
+    border-radius: 20% 20% 50% 50%;
+}
+.hire{
+    --hire:-var(--face-size);
+  background-color: hsl(19, 46%, 40%);
+  height: calc(var(--face-size) * .5);
+  width: calc(var(--face-size) * 1);
+  position: absolute;
+  top: -30%;
+  border-radius: 4% 50% 0 0;
+}
+.hire::before{
+    content:"";
+    background-color: hsl(19, 46%, 40%);
+    height: calc(var(--face-size) * .7);
+    width: calc(var(--face-size) * .04);
+    position: absolute;
+    bottom: -80%;
+}
+.hire::after{
+    content:"";
+    background-color: hsl(19, 46%, 40%);
+    height: calc(var(--face-size) * .6);
+    width: calc(var(--face-size) * .04);
+    position:absolute;
+    right:0;
+    bottom: -80%;
+}
+.triangle{
+    background-color: hsl(19, 46%, 40%);
+    height: calc(var(--face-size) * .05);
+    width: calc(var(--face-size) * .1);
+    position:absolute;
+    transform:rotate(130deg);
+    bottom:-6%;
+}
+.triangle-right{
+    transform:rotate(-130deg);
+    right:0;
+    z-index: 10;
+}
+.ear{
+    background-color: rgb(238, 206, 206);
+    height:calc(var(--face-size) * .3);
+    width: calc(var(--face-size) * .15);
+    position:absolute;
+    top: 23%;
+    left:-7%;
+    z-index: -10;
+    border-radius: 10% 0 10% 10%;
+    border:1px solid rgb(170, 146, 146);
+}
+.ear-right{
+    background-color: rgb(238, 206, 206);
+    height:calc(var(--face-size) * .3);
+    width: calc(var(--face-size) * .15);
+    position:absolute;
+    top:23%;
+    left: initial;
+    right: -5%;
+    z-index: -10;
+    border-radius: 0 10% 10% 0;
+}
